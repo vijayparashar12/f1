@@ -33,4 +33,11 @@ public class Race {
 	public int getFinalTime() {
 		return finalTime;
 	}
+	
+	public static void main(String[] args) {
+		Race race = new Race(1000, 5);
+		race.start();
+		System.out.println("winner is "+race.getWinner().getDriver().getName());
+		System.out.println("Time to finish the race (sec) "+ race.getFinalTime());
+	}
 }

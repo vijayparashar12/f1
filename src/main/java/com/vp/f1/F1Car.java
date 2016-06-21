@@ -8,9 +8,6 @@ public class F1Car extends Car{
 		this.acceleration = acceleration;
 	}
 
-	/* (non-Javadoc)
-	 * @see com.vp.f1.Car#currentSpeed(int)
-	 */
 	public float currentSpeed(int time) {
 		speed = speed + acceleration * time;
 		topSpeedCheck();
@@ -23,9 +20,6 @@ public class F1Car extends Car{
 		}
 	}
 
-	/* (non-Javadoc)
-	 * @see com.vp.f1.Car#doBreak()
-	 */
 	public float doBreak() {
 		speed = speed * HANDLING_FACTOR;
 		topSpeedCheck();

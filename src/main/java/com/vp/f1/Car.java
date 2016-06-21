@@ -1,38 +1,13 @@
 package com.vp.f1;
 
-public class Car {
-	private static final float HANDLING_FACTOR = 0.8f;
+public abstract class Car {
 
-	private int topSpeed;
-	private float acceleration;
-	private float speed;
+	protected int topSpeed;
+	protected float acceleration;
+	protected float speed;
 
-	public Car(int topSpeed, float acceleration) {
-		this.topSpeed = topSpeed;
-		this.acceleration = acceleration;
-	}
+	public abstract float currentSpeed(int time);
 
-	public float currentSpeed(int time) {
-		speed = speed + acceleration * time;
-		topSpeedCheck();
-		return speed;
-	}
+	public abstract float doBreak();
 
-	private void topSpeedCheck() {
-		if (speed > topSpeed) {
-			speed = topSpeed;
-		}
-	}
-
-	public float doBreak() {
-		speed = speed * HANDLING_FACTOR;
-		topSpeedCheck();
-		return speed;
-	}
-
-	public float nitro() {
-		speed = speed * 2;
-		topSpeedCheck();
-		return speed;
-	}
 }

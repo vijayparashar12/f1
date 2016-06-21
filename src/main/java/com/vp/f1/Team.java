@@ -12,7 +12,7 @@ public class Team {
 	public Team(int index, Track track) {
 		this.index = index;
 		//this.track = track;
-		Car car = new Car(DEFAULT_TOP_SPEED + TOP_SPEED_FACTOR * index, ACELERATION_FACTOR * index);
+		F1Car car = new F1Car(DEFAULT_TOP_SPEED + TOP_SPEED_FACTOR * index, ACELERATION_FACTOR * index);
 		String driverName = "Driver" + index;
 		driver = new Driver(driverName,index, car,track);
 	}

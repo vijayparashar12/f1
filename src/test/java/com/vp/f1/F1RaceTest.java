@@ -17,7 +17,7 @@ public class F1RaceTest {
 		assertFalse(track.amITheLastDriver(2));
 		assertTrue(track.amITheLastDriver(1));
 	}
-	
+
 	@Test
 	public void ifCarHasSomeOtherCarWithDistanceOf10MetersThanItHasNeighbour() throws Exception {
 		StubTrack track = new StubTrack(1000, 3);
@@ -27,15 +27,15 @@ public class F1RaceTest {
 		assertTrue(track.hasNeighbour(1));
 		assertTrue(track.hasNeighbour(2));
 	}
-	
+
 	@Test
 	public void getWinnerIndexTest() throws Exception {
 		StubTrack track = new StubTrack(1000, 3);
 		float[] d = { 100f, 200f, 300f };
 		track.setDistanceArray(d);
-		assertEquals(track.getLeadingTeamIndex(),2);
+		assertEquals(track.getLeadingTeamIndex(), 2);
 	}
-	
+
 	@Test
 	public void ifDistanceOfLeadingTeamIsMoreThanTrackLengthThanShowCheckedFlag() throws Exception {
 		StubTrack track = new StubTrack(1000, 3);
@@ -43,23 +43,25 @@ public class F1RaceTest {
 		track.setDistanceArray(d);
 		assertTrue(track.showCheckedFlag());
 	}
-	
+
 	@Test
 	public void validateWinner() throws Exception {
-		/*Race f1Race = new Race(1000, 3);
+		Race f1Race = new Race(1000, 3);
 		f1Race.start();
-		assertEquals(f1Race.getWinner().getIndex(),3);
-		System.out.println(f1Race.getFinalTime());*/
-		
-		Race f1Race5Team = new Race(1000, 10);
+		assertEquals(f1Race.getWinner().getIndex(), 3);
+
+	}
+
+	@Test
+	public void smallRace() throws Exception {
+		Race f1Race5Team = new Race(100, 10);
 		f1Race5Team.start();
-		System.out.println(f1Race5Team.getWinner().getIndex());
-		assertEquals(f1Race5Team.getWinner().getIndex(),3);
-		System.out.println(f1Race5Team.getFinalTime());
+		assertEquals(f1Race5Team.getWinner().getIndex(), 1);
 	}
 
 	/**
 	 * Track class is stubbed to get access of distance field.
+	 * 
 	 * @author vijay
 	 */
 	class StubTrack extends Track {

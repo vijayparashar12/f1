@@ -2,11 +2,11 @@ package com.vp.f1;
 
 public class Driver {
 	private String name;
-	private Car car;
+	private F1Car car;
 	private Track track;
 	private int teamIndex;
 
-	public Driver(String name, int teamIndex, Car car, Track track) {
+	public Driver(String name, int teamIndex, F1Car car, Track track) {
 		this.name = name;
 		this.teamIndex = teamIndex;
 		this.car = car;

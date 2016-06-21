@@ -1,4 +1,4 @@
-package com.vp.agoda;
+package com.vp.f1;
 
 public class Race {
 	public static final int TIME_INTERVAL = 2;

@@ -1,4 +1,4 @@
-package com.vp.agoda;
+package com.vp.f1;
 
 public class Team {
 	private static final int ACELERATION_FACTOR = 2;

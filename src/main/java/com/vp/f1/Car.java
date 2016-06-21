@@ -1,4 +1,4 @@
-package com.vp.agoda;
+package com.vp.f1;
 
 public class Car {
 	private static final float HANDLING_FACTOR = 0.8f;

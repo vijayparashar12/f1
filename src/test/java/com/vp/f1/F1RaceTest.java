@@ -1,8 +1,11 @@
-package com.vp.agoda;
+package com.vp.f1;
 
 import static org.junit.Assert.*;
 
 import org.junit.Test;
+
+import com.vp.f1.Race;
+import com.vp.f1.Track;
 
 public class F1RaceTest {
 

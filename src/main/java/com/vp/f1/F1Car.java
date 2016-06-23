@@ -1,6 +1,7 @@
 package com.vp.f1;
 
-public class F1Car extends Car{
+public class F1Car extends Car {
+	private boolean nitroExhausted;
 	private static final float HANDLING_FACTOR = 0.8f;
 
 	public F1Car(int topSpeed, float acceleration) {
@@ -27,8 +28,11 @@ public class F1Car extends Car{
 	}
 
 	public float nitro() {
-		speed = speed * 2;
-		topSpeedCheck();
+		if (!nitroExhausted) {
+			speed = speed * 2;
+			topSpeedCheck();
+			nitroExhausted = true;
+		}
 		return speed;
 	}
 }
